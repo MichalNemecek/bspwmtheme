@@ -1,0 +1,6 @@
+read comments .config/bspwm/bspwm and .config/polybar/config
+
+unzip otf-hermit-2.0.tar.gz and put otf files into /usr/local/share/fonts/
+
+firefox theme:
+https://addons.mozilla.org/en-US/firefox/addon/nicothin-space/

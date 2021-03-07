@@ -1,0 +1,19 @@
+#!/bin/sh
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+bspc config border_width 2
+bspc config window_gap 12
+
+bspc config split_ratio 0.5
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+# only for switching between czech and US keyboards
+setxkbmap -option grp:ctrl_alt_toggle us,cz &
+
+#kills running polybars and starts too and bottom bars
+killall -q polybar
+polybar top &
+polybar bottom &

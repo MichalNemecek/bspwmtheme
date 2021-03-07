@@ -1,0 +1,3 @@
+PS1=$'\[\e[m\]\[\e[48;5;32m\] \u \[\e[38;5;32m\]\[\e[48;5;243m\]\ue0b0\[\e[m\]\[\e[48;5;243m\] \w \[\e[m\]\[\e[38;5;243m\]\ue0b0\[\e[m\] '
+
+requires a powerline-enabled font like Hermit

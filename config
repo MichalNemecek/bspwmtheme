@@ -1,0 +1,95 @@
+[bar/top]
+monitor = LVDS-1
+width = 100%
+height = 18
+background = #00000000
+foreground = #ccffffff
+line-color = #00000000
+line-size = 20
+spacing = 0
+padding-right = 1
+padding-left = 1
+module-margin = 1
+
+font-0 = Hermit:size=10;2
+
+modules-left = xkeyboard title
+modules-right = alsa date
+
+[bar/bottom]
+monitor = LVDS-1
+width = 100%
+height = 18
+background = #00000000
+foreground = #ccffffff
+line-color = #00000000
+line-size = 20
+spacing = 0
+padding-right = 1
+padding-left = 1
+module-margin = 1
+bottom=true
+
+font-0 = Hermit:size=10;2
+modules-left = bspwm
+modules-right = wnetwork lnetwork battery
+
+[module/date]
+type = internal/date
+date = %a, %Y/%m/%d%
+time = %I:%M:%S %p
+label = %date% %time%
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 50
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = false
+enable-click = false
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+label-urgent-foreground = #000000
+label-urgent-background = #ee0000
+label-focused-background = #333333
+
+[module/alsa]
+type = internal/alsa
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+master-mixer = Master
+mapped = false
+interval = 10
+label-muted = MUTE
+
+[module/xkeyboard]
+type = internal/xkeyboard
+label-layout = %layout%
+label-indicator-on =
+label-indicator-off =
+
+# change enp9s0 to your own ethernet interface
+[module/lnetwork]
+type = internal/network
+interface = enp9s0
+interval = 3.0
+label-connected = L:%local_ip%
+
+# change wlp12s0 to your own wifi interface
+[module/wnetwork]
+type = internal/network
+interface = wlp12s0
+interval = 3.0
+label-connected = W:%local_ip%
+
+# change AC and BAT0 according to "ls /sys/class/power_supply/"
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+poll-interval = 5

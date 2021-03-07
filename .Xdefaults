@@ -1,0 +1,4 @@
+URxvt.background:black
+URxvt.foreground:white
+URxvt.scrollBar:false
+URxvt.font:xft:Hermit:size=10:antialias=true
