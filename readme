@@ -1,5 +1,6 @@
-read comments .config/bspwm/bspwm and .config/polybar/config
-
+read comments in bspwmrc and config
+config goes to .config/polybar/config
+bspwmrc goes to .config/bspwm/bspwmrc
 unzip otf-hermit-2.0.tar.gz and put otf files into /usr/local/share/fonts/
 
 firefox theme:
